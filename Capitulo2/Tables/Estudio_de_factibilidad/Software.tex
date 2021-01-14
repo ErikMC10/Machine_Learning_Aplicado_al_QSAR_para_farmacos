@@ -1,0 +1,19 @@
+% Please add the following required packages to your document preamble:
+% \usepackage{longtable}
+% Note: It may be necessary to compile the document several times to get a multi-page table to line up properly
+\begin{longtable}{|l|l|l|}
+\caption{Elementos de software disponibles para el desarrollo del sistema}
+\label{Est_Soft}\\
+\hline
+\textbf{NOMBRE}    & \textbf{VERSIÓN}                                                                                                     & \textbf{DESCRIPCIÓN}                                                                                                                                    \\ \hline
+\endfirsthead
+%
+\multicolumn{3}{c}%
+{{\bfseries Tabla \thetable\ Continuación de la página anterior}} \\
+\endhead
+%
+Linux              & \begin{tabular}[c]{@{}l@{}}Cualquier distribución en \\ su última versión estable.\\ (Basada en Debian)\end{tabular} & \begin{tabular}[c]{@{}l@{}}1GNU/Linux  es un sistema \\ operativo libre tipo Unix \\ POSIX; multiplataforma, \\ multiusuario y multitarea.\end{tabular} \\ \hline
+Visual Studio Code & 1.38.0 o última versión estable.                                                                                     & \begin{tabular}[c]{@{}l@{}}Editor de texto enfocado \\ a la creación de código fuente.\end{tabular}                                                     \\ \hline
+Python             & 3.7.4 o última versión estable.                                                                                      & \begin{tabular}[c]{@{}l@{}}Lenguaje de programación \\ de alto nivel multipropósito.\end{tabular}                                                       \\ \hline
+Git                & 2.23.0 o última versión estable.                                                                                     & Sistema de control de versiones.                                                                                                                        \\ \hline
+\end{longtable}

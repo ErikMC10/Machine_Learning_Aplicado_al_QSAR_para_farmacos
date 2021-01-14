@@ -1,0 +1,37 @@
+% Please add the following required packages to your document preamble:
+% \usepackage{longtable}
+% Note: It may be necessary to compile the document several times to get a multi-page table to line up properly
+\begin{longtable}{|l|l|}
+\caption{Requerimiento funcional 3}
+\label{RF3}\\
+\hline
+\begin{tabular}[c]{@{}l@{}}Nombre del requerimiento funcional:\\ Administración y presentación de\\ resultados.\end{tabular}                                                        & ID: RF3                                                                                                            \\ \hline
+\endfirsthead
+%
+\multicolumn{2}{c}%
+{{\bfseries Tabla \thetable\ Continuación de la página anterior}} \\
+\endhead
+%
+\multicolumn{2}{|l|}{Área: Muestra de resultados finales.}                                                                                                                                                                                                                                               \\ \hline
+\multicolumn{2}{|l|}{Actor(es): Compuestos óptimos resultantes.}                                                                                                                                                                                                                                         \\ \hline
+\multicolumn{2}{|l|}{Interesados: Sistema y usuario del sistema.}                                                                                                                                                                                                                                        \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{@{}l@{}}Descripción: El sistema poseerá la función de enlistar los compuestos\\ óptimos de acuerdo a la evaluación de las características de los candidatos y\\ mostrarlos de manera gráfica al usuario a través de una lista.\end{tabular}}                     \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{@{}l@{}}Evento desencadenador: Tras haber realizado los respectivos cálculos\\ entre los efectos de cada uno de los compuestos de interés de evaluacion\\ del sistema.\end{tabular}}                                                                             \\ \hline
+\multicolumn{2}{|l|}{Tipo de desencadenador: Temporal.}                                                                                                                                                                                                                                                  \\ \hline
+Pasos realizados (ruta principal)                                                                                                                                                   & Información para los pasos                                                                                         \\ \hline
+\begin{tabular}[c]{@{}l@{}}1.- El sistema ha terminado de realizar\\ cálculos que tiene que ver con las\\ actividades e interacciones entre \\ compuestos y patología.\end{tabular} & No requiere información.                                                                                           \\ \hline
+\begin{tabular}[c]{@{}l@{}}2.- El sistema recibe el conjunto final y\\ comienza la lectura del mismo\end{tabular}                                                                   & \begin{tabular}[c]{@{}l@{}}Archivo de texto plano con el \\ nombre de los compuestos y \\ su aptitud.\end{tabular} \\ \hline
+3.- Creación de la lista ordenada.                                                                                                                                                  & No requiere información.                                                                                           \\ \hline
+\begin{tabular}[c]{@{}l@{}}4.- Desplegar de manera gráfica una lista\\ de compuestos ordenada del más apto al\\ menos apto.\end{tabular}                                            & Archivo con lista ordenada                                                                                         \\ \hline
+\multicolumn{2}{|l|}{Extensiones o Rutas alternativas.}                                                                                                                                                                                                                                                  \\ \hline
+\begin{tabular}[c]{@{}l@{}}1.1.- El sistema muestra el conjunto final en\\ modo de lista No ordenada\end{tabular}                                                                   & Conjunto final.                                                                                                    \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{@{}l@{}}Precondiciones: El cálculo de las actividades e interacciones entre\\ compuestos y patología se realizó con éxito.\end{tabular}}                                                                                                                         \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{@{}l@{}}Postcondiciones: El sistema despliega de manera gráfica al usuario una\\ lista con los nombres de los compuestos ingresados y su respectiva aptitud\\ obtenida del cálculo.\end{tabular}}                                                                \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{@{}l@{}}Suposiciones: El cálculo de los compuestos es correcto y el sistema recibe\\ de manera exitosa el conjunto final.\end{tabular}}                                                                                                                          \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{@{}l@{}}Garantía de éxito: El sistema despliega una lista ordenada de los nombres\\ de los compuestos usando la métrica de mas apto al menos apto para\\ enfrentar las proteínas de la patología.\end{tabular}}                                                  \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{@{}l@{}}Garantía mínima: El sistema despliega una lista con los nombres de los\\ compuestos y sus aptitudes.\end{tabular}}                                                                                                                                       \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{@{}l@{}}Requerimientos cumplidos: Validación de los datos obtenidos de los\\ compuestos y patología; Cálculo de las aptitudes con éxito.\end{tabular}}                                                                                                           \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{@{}l@{}}Cuestiones pendientes: Considerar el formato de muestra de resultados\\ obtenidos por el sistema.\end{tabular}}                                                                                                                                          \\ \hline
+\multicolumn{2}{|l|}{Prioridad: Alta.}                                                                                                                                                                                                                                                                   \\ \hline
+\multicolumn{2}{|l|}{Riesgo: Alto.}                                                                                                                                                                                                                                                                      \\ \hline
+\end{longtable}

@@ -1,0 +1,94 @@
+\lhead{Capítulo \ref{ch_4}}
+\rhead{\newtitle}
+\cfoot{\thepage}
+\renewcommand{\headrulewidth}{1pt}
+\renewcommand{\footrulewidth}{1pt}
+
+\chapter{Diseño del Sistema de Información}\label{ch_4}
+\noindent El objetivo del proceso de Diseño del Sistema de Información (DSI) es la definición de la arquitectura del sistema y del entorno tecnológico que le va a dar soporte, junto con la especificación detallada de los componentes del sistema de información.\\
+
+\noindent A partir de dicha información, se generan todas las especificaciones de construcción relativas al propio sistema, así como la descripción técnica del plan de pruebas, la definición de los requisitos de implantación y el diseño de los procedimientos de migración y carga inicial,éstos últimos cuando proceda.\\
+
+\noindent En la actividad Definición de la Arquitectura del Sistema, se establece el particionamiento físico del sistema de información, así como su organización en subsistemas de diseño, la especificación del entorno tecnológico, y sus requisitos de operación, administración, seguridad y control de acceso. Se completan los catálogos de requisitos y normas, en función de la definición del entorno tecnológico, con aquellos aspectos relativos al diseño y construcción que sea necesario contemplar. Asimismo, se crea un catálogo de excepciones del sistema, en el que se registran las situaciones de funcionamiento secundario o anómalo que se estime oportuno considerar y, por lo tanto, diseñar y probar. Este catálogo de excepciones se utiliza como referencia en la especificación técnica de las pruebas del sistema.
+\section{Definición de niveles de arquitectura.}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.25]{Capitulo3/images/Niveles_de_Arquitectura.png}
+    \caption{Niveles de Arquitectura}
+    \label{arquitectura_N}
+\end{figure}
+\newpage
+
+\section{Identificación de Requisitos de Diseño}
+\noindent Se realiza la especificación de los requisitos que están directamente relacionados con la adopción o diseño de la arquitectura, y que pueden condicionar el diseño o la construcción del sistema de información.
+\input{Capitulo3/Tables/req_dis.tex}
+
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+\section{Especificación de Excepciones}
+\noindent El objetivo de esta tarea es la definición de los comportamientos no habituales en el
+sistema, que reflejan situaciones anómalas o secundarias en el funcionamiento y ejecución del
+sistema de información. Para ello, se establece previamente el nivel de especificación de las
+mismas, así como los criterios de catalogación y clasificación.
+Se propone su catalogación como ayuda para el diseño del sistema de información y
+como guía en la especificación técnica de las pruebas, al permitir la generación de algunos
+casos de prueba de forma inmediata. Dicho catálogo se va completando a partir de las
+actividades correspondientes al diseño detallado de los subsistemas.\\
+
+Las excepciones se describen incluyendo, al menos, los siguientes conceptos:\\
+
+\begin{itemize}
+    \item Tipo y descripción de la excepción.
+    \item Condiciones previas del sistema de información.
+    \item Elemento afectado (nodo, módulo, caso de uso).
+    \item Respuesta del sistema de información.
+    \item Elemento asociado a la respuesta esperada del sistema (módulo, clase, procedimiento,etc.).
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+\input{Capitulo3/Tables/Catalogo.tex}
+\section{Especificación de Estándares y Normas de
+Diseño y Construcción}
+\noindent En esta sección se definen los estándares técnicos y de nomenclatura, normas y
+recomendaciones, que generalmente están relacionados con la adopción o diseño de una arquitectura o infraestructura tecnológica concreta, y que pueden condicionar el diseño o la construcción del sistema de información.
+\input{Capitulo3/Tables/estandares.tex}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Identificación de Subsistemas de Diseño}
+\noindent En este apartado se divide de forma lógica el sistema de información en subsistemas de
+diseño, con el fin de reducir la complejidad y facilitar el mantenimiento. Hay que tomar como
+referencia inicial los subsistemas de análisis especificados en el proceso de Análisis del
+Sistema de Información (ASI).
+\subsection{Diagramas de estructura}
+
+\begin{figure}[H]
+    \centering
+\includegraphics[scale=0.5]{Capitulo3/images/1_5Estructura.png}
+    \caption{Diagrama de Estructura}
+    \label{Diagramas_de_estructura}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.5]{Capitulo3/images/1_5EstructuraMod2.png}
+    \caption{Diagrama de Estructura modulo 2}
+    \label{Diagrama_Estruct_mod2}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+\section{Especificación de requisitos de operación y seguridad}
+\noindent El objetivo de esta tarea es definir los procedimientos de seguridad y operación
+necesarios para no comprometer el correcto funcionamiento del sistema y garantizar el
+cumplimiento de los niveles de servicios que exigirá el sistema en cuanto a la gestión de
+operaciones (procesos por lotes, seguridad, comunicaciones, etc.).
+\input{Capitulo3/Tables/Req_op_seg.tex}
+\section{Verificación de las Especificaciones de Diseño}
+\noindent El objetivo de esta tarea es asegurar la calidad formal de los distintos modelos, conforme
+a la técnica seguida para la elaboración de cada producto y a las normas y estándares
+especificados en el catálogo de normas.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.35]{Capitulo3/images/7_1.png}
+    \caption{Diseño de arquitectura modular.}
+    \label{Diagram_4}
+\end{figure}

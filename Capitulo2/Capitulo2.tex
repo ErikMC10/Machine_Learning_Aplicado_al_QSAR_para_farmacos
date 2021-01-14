@@ -1,0 +1,237 @@
+\lhead{Capítulo \ref{ch_3}}
+\rhead{\newtitle}
+\cfoot{\thepage}
+\renewcommand{\headrulewidth}{1pt}
+\renewcommand{\footrulewidth}{1pt}
+
+\chapter{Análisis del Sistema de Información}\label{ch_3}
+\noindent La experimentación con animales es un recurso ampliamente utilizado por empresas que se dedican a la elaboración de fármacos, con el objetivo de garantizar que sus productos no dañan la salud humana. Este proceso somete a distintas especies a métodos de pruebas que, en su mayoría, les causan daños irreversibles. \\
+En la actualidad, la presencia de la tecnología en el área de las ciencias médico-biológicas ha cambiado por completo la trayectoria para el desarrollo de los fármacos, identificando y descubriendo nuevas soluciones potenciales con una reducción significativa de costos y tiempo.
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5%%%%%%%%%%%
+\section{Estudio de Factibilidad}
+\input{Capitulo2/Tables/Estudio_de_factibilidad/Estudio_de_fact.tex}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Ámbito del sistema}
+\noindent SisPAF (Sistema para la predicción de actividades farmacológicas) será una aplicación que permitirá realizar pruebas de aptitud para un conjunto de fármacos contra una patología particular, ambos definidos por el usuario.
+SisPAF realizará pruebas en tiempo real para determinar qué fármacos son más aptos para combatir la patología indicada, generando una lista de resultados que indique las probabilidades de éxito que tiene cada fármaco de eliminar o controlar a la patología. 
+Este sistema no sustituye el proceso de la experimentación en animales, sino que propone una alternativa para reducir la cantidad de seres vivos que se requieren para este proceso, al compactar los fármacos que desean probarse y ordenarlos del más recomendable al menos recomendable.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Establecimiento de Requisitos}
+\subsection{Obtención de Requisitos}
+%Requerimientos funcionales
+\input{Capitulo2/Tables/ReqF/RF.tex}
+\newpage
+%Requerimientos No funcionales
+\input{Capitulo2/Tables/ReqF/RNF.tex}
+\newpage
+\subsection{Análisis de Requisitos}
+%Descripcion de los requerimientos funcionales
+\input{Capitulo2/Tables/ReqF/DescripcionRF/Union.tex}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Identificación de Subsistemas de análisis}
+%%%%%%%
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.7]{Capitulo2/images/DFDContext.png}
+    \caption{Nivel de contexto.}
+    \label{nivel contexto}
+\end{figure}
+%%%%%%%
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.65]{Capitulo2/images/DFDN-1.png}
+    \caption{Nivel 1}
+    \label{nivel_1}
+\end{figure}
+%%%%%%%
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.5]{Capitulo2/images/DFD-1.png}
+    \caption{Nivel 2 - Requerimiento 1}
+    \label{nivel_2_req1}
+\end{figure}
+%%%%%%%
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.55]{Capitulo2/images/Req2.png}
+    \caption{Nivel 2 - Requerimiento 2}
+    \label{nivel_2_req2}
+\end{figure}
+%%%%%%%
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.5]{Capitulo2/images/DFD-RF3.png}
+    \caption{Nivel 2 - Requerimiento 3}
+    \label{nivel_2_req3}
+\end{figure}
+%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Modelo de Datos}
+%%%%%%%%%
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.3]{Capitulo2/images/ModeloConceptualDatos.png}
+    \caption{Modelo Conceptual de Datos}
+    \label{modelo_conceptual}
+\end{figure}
+%%%%%%%%%
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.4]{Capitulo2/images/modeloDatosLogico.png}
+    \caption{Modelo Lógico de Datos}
+    \label{fig:my_label}
+\end{figure}
+%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Interfaces de usuario} 
+\noindent La metodología que pone la base en la cual se desarrolla este proyecto, indica una serie de puntos a tomar en cuenta cuando se realiza el prototipado (medio a través del cual se simula el aspecto visual del sistema mediante la representación de los conceptos, componentes, objetos gráficos, entradas y salidas requeridas para la ejecución de cada función en respuesta a las necesidades planteadas), con el fin de conseguir una interfaz eficiente y compatible con las necesidades de los usuarios. Los puntos se indican en la siguiente lista:\\
+
+-	El principal punto que considerar y que constituye la base sobre la que se centra el diseño de prototipos es la identificación de los usuarios a los que va dirigido.\\
+
+-	Analizar las funciones que va a soportar el sistema, con el fin de establecer las dependencias existentes entre ellas y su secuencia de ejecución.
+-	Utilizar conceptos, términos y símbolos familiares al usuario, de modo que sea fácil de aprender y comprender.\\
+
+-	Mantener la coherencia dentro del propio sistema y entre sistemas.\\
+
+-	Facilitar la exploración del sistema sin riesgo, permitiendo interrumpir y deshacer las acciones realizadas. De esta forma, el usuario puede utilizar todas las funcionalidades del sistema y trabajar de forma más rápida y eficiente, con la seguridad de que cualquier error puede rectificarse.\\
+
+-	Dificultar la selección de acciones destructivas y no reversibles, pidiéndole verificación de cualquier acción que conlleve un riesgo importante.\\
+
+-	Proporcionar información sobre el estado de ejecución de las funciones, es decir, si la función invocada está en proceso, si se ha completado satisfactoriamente o se ha producido algún error.\\
+
+-	Agrupar las funciones de forma lógica y presentar primero las más utilizadas.\\
+
+-	Buscar la eficiencia en el diálogo evitando cambios frecuentes entre los dispositivos de entrada, tales como el ratón y el teclado.\\
+
+\noindent Una vez tomados en cuenta esos puntos para realizar el diseño, para definir los formatos individuales de las pantallas se realiza un análisis de la información a presentar en cada una de ellas. Este análisis se debe centrar en los siguientes puntos:\\
+
+-	Identificar los diferentes tipos de información como, por ejemplo, campos de datos, títulos, comandos y mensajes de error, con el fin de organizar la pantalla en áreas específicas y conseguir un equilibrio, regularidad, secuencialidad, así́ como, una simetría en la composición de las mismas.\\
+
+-	Estudiar el espacio disponible en las pantallas para determinar qué datos y en qué situación deben aparecer en las mismas, utilizando un formato de visualización que permita al usuario una rápida asimilación de la información.\\
+
+-	Intentar agrupar los datos relacionados y mostrar solo aquellos que son esenciales para la ejecución de la función o para la toma de una decisión, eliminado todas las entradas que sean innecesarias. Nunca se debe pedir al usuario que introduzca información que pueda adquirirse  automáticamente o calcularse internamente.\\
+
+-	Mantener la coherencia entre la entrada y la visualización de datos.\\
+
+-	Proteger al usuario de intentar alguna acción que podría provocar errores, desactivando los comandos que no son operativos en ese contexto.\\
+
+\noindent Todo esto es tomado en cuenta para el prototipado de interfaces y para su futuro desarrollo e implementación en el código.\\
+
+\noindent En esta actividad se especifican las interfaces entre el sistema y el usuario: formatos de
+pantallas, diálogos, e informes, principalmente. El objetivo es realizar un análisis de los
+procesos del sistema de información en los que se requiere una interacción del usuario, con el
+fin de crear una interfaz que satisfaga todos los requisitos establecidos, teniendo en cuenta los
+diferentes perfiles a quiénes va dirigido.\\
+
+\noindent Para el desarrollo de interfaces nos basaremos en la ISO 9241 (Proceso de Diseño Centrado en Usuarios) la cual nos proporciona una guía de actividades a través del ciclo de vida de los sistemas interactivos, que consisten en cuatro tipos diferentes de actividades.\\
+
+\noindent• Entender y especificar el contexto de uso.\\
+• Especificar los requerimientos de la organización y del usuario.\\
+• Proceder a diseñar soluciones.\\
+• Evaluar los diseños con respecto a los requerimientos.\\
+De las cuales nos enfocaremos en las últimas dos etapas donde se desarrollarán las siguientes actividades:\\
+
+\noindent 1.Realizaremos diseños de prototipos de nuestro producto con el fin de que pueda ser evaluado.\\
+2.Se representará cómo los usuarios pueden interactuar con la aplicación o proyecto.\\
+3.Crear un plan de evaluación.\\
+4.Reportar los resultados de la evaluación y las recomendaciones de cambio.\\
+4.1.Iterar esta actividad hasta que el objetivo del diseño sean logrados.\\
+Para poder realizar la actividad 3, debemos crear un plan de evaluación, por lo cual nosotros decidimos tomar un plan creado para evaluar interfaces de windows llamada “Windows: GUI Guidelines 4.1” creada por la empresa “ADD Servicios Informáticos S.A”.\\
+
+\noindent Estas recomendaciones fueron implementadas para un proyecto en específico llamado “Proyecto BOE”, por lo cual se hicieron adecuaciones con respecto a nuestro sistema.\\
+
+ \noindent Estos estándares se encuentran definidos y evaluados en la tabla \ref{estandares}, donde se encuentra definida la norma, su tarea y el como aplica en nuestro proyecto.\\
+
+\subsection{Pantallas del sistema}
+\noindent Las siguientes pantallas del sistema muestran los procesos mas importantes con las cuales el usuario tendrá que interactuar.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.4]{Capitulo2/images/UI/1_tutorial.PNG}
+    \caption{Tutorial del archivo base}
+    \label{Tutorial_1}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.4]{Capitulo2/images/UI/2_tutorial.PNG}
+    \caption{Especificación de la estructural del archivo base }
+    \label{Tutorial_2}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.4]{Capitulo2/images/UI/3_pantalla_inicio.PNG}
+    \caption{Pantalla de inicio}
+    \label{Pantalla_de_inicio}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.4]{Capitulo2/images/UI/5_preeliminar.PNG}
+    \caption{Pantalla preliminar de los elementos encontrados}
+    \label{preliminar}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.4]{Capitulo2/images/UI/7_resultados.PNG}
+    \caption{Resultado arrojado por el sistema (Lista ordenada)}
+    \label{Resultados}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Pantallas secundarias}
+\noindent En este apartado se muestran las pantallas secundarias del sistemas, en la cual solo es cuestión del termino de un proceso interno del sistema. Por lo cual no necesita mayor interacción del usuario.
+%%%%%%%%%%%%%%5
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.4]{Capitulo2/images/UI/4_Espera_busqueda.PNG}
+    \caption{Pantalla de espera mientras la búsqueda de datos se ejecuta}
+    \label{Espera_busq}
+\end{figure}
+%%%%%%%%%%%%%%
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.4]{Capitulo2/images/UI/6_espera_calculo.PNG}
+    \caption{Pantalla de espera mientras e calculo se efectúa}
+    \label{Espera_cal}
+\end{figure}
+%%%%%%%%%%%%%%%
+\subsubsection{Mensajes}
+\noindent Estos son los mensajes que se pueden mostrar al usuario por una posible excepción del sistema. 
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.4]{Capitulo2/images/UI/9_error_conexion.PNG}
+    \caption{Mensaje de error de conexión}
+    \label{Mensaje_error}
+\end{figure}
+%%%%%%%%%%%%%%%
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.4]{Capitulo2/images/UI/10_error_archivo.PNG}
+    \caption{Mensaje de error de archivo}
+    \label{error_de_Arch}
+\end{figure}
+%%%%%%%%%%%%%%%%
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.4]{Capitulo2/images/UI/11_error_datos.PNG}
+    \caption{Mensaje de error de datos}
+    \label{error_de_datos_notf}
+\end{figure}
+%%%%%%%%%%%%%%%%
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.4]{Capitulo2/images/UI/13_advertencia.PNG}
+    \caption{Advertencia de datos incompletos}
+    \label{advertencia}
+\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%55
+\section{Plan de acción}
+
+%Plan de pruebas unitarias
+\input{Capitulo2/Tables/Plan_P/Plan_de_pruebas.tex}
+
+\newpage 

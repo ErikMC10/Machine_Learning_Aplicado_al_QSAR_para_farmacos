@@ -1,0 +1,39 @@
+% Please add the following required packages to your document preamble:
+% \usepackage{longtable}
+% Note: It may be necessary to compile the document several times to get a multi-page table to line up properly
+\begin{longtable}{|l|l|}
+\caption{Caso de prueba RF1.6}
+\label{CP_RF1_6}\\
+\hline
+\textbf{ID del Caso de prueba}                                                          & CPRF6                                                                                                                                                                                                                                                                    \\ \hline
+\endfirsthead
+%
+\multicolumn{2}{c}%
+{{\bfseries Tabla \thetable\ Continuación de la página anterior}} \\
+\endhead
+%
+\textbf{Versión}                                                                        & 2.0                                                                                                                                                                                                                                                                     \\ \hline
+\textbf{Nombre}                                                                         & Confirmación de los resultados de la búsqueda.                                                                                                                                                                                                                           \\ \hline
+\textbf{\begin{tabular}[c]{@{}l@{}}Identificador de \\ requerimiento\end{tabular}}      & RF1.6                                                                                                                                                                                                                                                                    \\ \hline
+\textbf{Propósito}                                                                      & \begin{tabular}[c]{@{}l@{}}Rectificar el funcionamiento del sistema para \\ indicar el estatus de la información obtenida de \\ los previos requerimientos referente a\\ compuestos y proteína(s) de interés.\end{tabular}                                               \\ \hline
+\textbf{Dependencias}                                                                   & \begin{tabular}[c]{@{}l@{}}Correcta obtención de la información necesaria \\ de los compuestos y la requerida para la(s) \\ proteína(s) objetivo.\end{tabular}                                                                                                           \\ \hline
+\textbf{\begin{tabular}[c]{@{}l@{}}Ambiente de \\ prueba/configuración\end{tabular}}    & \begin{tabular}[c]{@{}l@{}}- Hardware: Equipo de computo\\ (preferentemente portatíl)\\ - Software: Compilador python3, \\ IDE y/o editor de texto.\end{tabular}                                                                                                         \\ \hline
+\textbf{Inicialización}                                                                 & \begin{tabular}[c]{@{}l@{}}- Codificación correspondiente al \\ requerimiento.\\ - Previa realización de la pruebas  de los\\  RF previos, especialmente para trabajar \\ bajo la creación de los archivos \\ correspondientes de a compuestos y proteinas.\end{tabular} \\ \hline
+\textbf{Finalización}                                                                   & N/A                                                                                                                                                                                                                                                                      \\ \hline
+\textbf{Acciones}                                                                       & \begin{tabular}[c]{@{}l@{}}- Compilar el código correspondiente.\\ - Contar con los archivos creados \\ previamente (compuesto y proteína(s)).\end{tabular}                                                                                                              \\ \hline
+\textbf{\begin{tabular}[c]{@{}l@{}}Descripción de los \\ datos de entrada\end{tabular}} & \begin{tabular}[c]{@{}l@{}}- Nombre del compuesto.\\ - Directorio de los archivos \\ correspondiente a los compuestos.\\ - Directorio de los archivos que \\ pertenecen a la(s) proteína(s).\end{tabular}                                                                \\ \hline
+\textbf{Salida esperada}                                                                & \begin{tabular}[c]{@{}l@{}}- Notificación de los estados de cada uno de\\  los archivos, dependiendo de su origen, ya sea \\ de un compuesto o de una proteína.\end{tabular}                                                                                             \\ \hline
+\textbf{Salida obtenida}                                                                &  \begin{tabular}[c]{@{}l@{}}
+- Notificación de que se finalizó la búsqueda;\\
+Ahora cada uno de los compuestos y proteínas\\
+mostrando el estatus de cada búsqueda.\end{tabular}                                                                                                                                                                                                                                                                          \\ \hline
+\textbf{Resultado}                                                                      &   \begin{tabular}[c]{@{}l@{}}
+- Se visualiza la pantalla de los resultados\\
+de búsqueda, los resultados de la obtención \\
+de datos son plasmados en una tabla.\end{tabular}                                                                                                                                                                                                                                                                        \\ \hline
+\textbf{Severidad}                                                                      &   \textbf{- Nula}                                                                                                                                                                                                                                                                \\ \hline
+\textbf{Evidencia}                                                                      &      Evidencia en la imagen \ref{CPRF6v2}                                                                                                                                                                                                                                                                    \\ \hline
+\textbf{Estado}                                                                         & \begin{tabular}[c]{@{}l@{}}
+Iniciado.\\ Realizar prueba nuevamente.
+\end{tabular}                                                                                                                                                                                                                                                            \\ \hline
+\end{longtable}

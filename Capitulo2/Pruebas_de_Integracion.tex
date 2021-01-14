@@ -1,0 +1,58 @@
+\subsection{Pruebas de Integración}{
+
+\noindent El objetivo de las pruebas de integración es verificar el correcto ensamblaje entre los distintos componentes una vez que han sido probados unitariamente con el fin de comprobar que interactúan correctamente a través de sus interfaces, tanto internas como externas, cubren la funcionalidad establecida y se ajustan a los requisitos no funcionales especificados en las verificaciones correspondientes.\\
+
+\noindent Existen diversas formas de desarrollar las pruebas de integración, ya sea de manera incremental o no incremental. En un inicio se tienen contemplado un modelo incremental, donde se combina  un componente,para proseguir con el siguiente componente que se debe probar para obtener un  conjunto de componentes que ya están probados y se va incrementando progresivamente el número de componentes a probar.\\
+
+\noindent Dentro de un planteamiento incremental, tenemos diversos modelos para realizar la pruebas, uno el de Arriba-abajo, De Abajo a Arriba y el Combinado.\\
+
+\noindent De esta manera, se ha considerado, un modelo Arriba-abajo, en el cual el primer componente que se desarrolla y prueba es el primero de la jerarquía. Los componentes de nivel más bajo se sustituyen por componentes auxiliares para simular a los componentes invocados. En este caso no son necesarios componentes conductores. Una de las ventajas de aplicar esta estrategia es que las interfaces entre los distintos componentes se prueban en una fase temprana y con frecuencia.\\
+
+\noindent De acuerdo a esta jerarquía, se contemplan 3 módulos principales, que son:
+
+\begin{itemize}
+    \item Búsqueda de Información.
+    \item Procesamiento de Información.
+    \item Generar listado de resultados.
+\end{itemize}
+
+\noindent Siendo eso tres módulos esenciales, continuando con lo obtenido en las pruebas unitarias, en listamos que requerimientos funcionales corresponden a cada módulo.
+
+\begin{itemize}
+    \item Búsqueda de Información.
+    \begin{itemize}
+        \item Adquisición del archivo base.
+        \item Búsqueda de los compuestos indicados.
+        \item Búsqueda de los descriptores de los compuestos.
+        \item Búsqueda de las actividades biológicas de los compuestos.
+        \item Búsqueda de las proteínas indicadas.
+        \item Confirmación de los resultados de la búsqueda.
+        \begin{itemize}
+            \item Construcción del conjunto cero.
+            \item Construcción del conjunto P
+        \end{itemize}
+    \end{itemize}
+    \item Procesamiento de Información
+    \begin{itemize}
+        \item Adquisición y descomposición del conjunto0.
+        \item Adquisición y descomposición del conjuntoP.
+        \item Método de Machine Learning para optimización.
+        \item Modelado QSAR.
+    \end{itemize}
+    \item Generar listado de resultados
+    \begin{itemize}
+        \item Lectura y ordenamiento del conjunto final.
+        \item Diseño gráfico de resultados.
+    \end{itemize}
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{Capitulo2/Tablas_integradoras/Prueba_Integradora_MI1}
+\input{Capitulo2/Tablas_integradoras/Prueba_Integradora_MI2}
+\input{Capitulo2/Tablas_integradoras/Pruebas_Intergradoras_MI3}
+
+
+
+%%%%%%%%%%%%%
+
+}

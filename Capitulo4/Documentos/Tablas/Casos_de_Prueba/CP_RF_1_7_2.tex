@@ -1,0 +1,43 @@
+% Please add the following required packages to your document preamble:
+% \usepackage{longtable}
+% Note: It may be necessary to compile the document several times to get a multi-page table to line up properly
+\begin{longtable}{|l|l|}
+\caption{Caso de prueba RF1.7.2}
+\label{CP_RF1_7_2}\\
+\hline
+\textbf{ID del Caso de prueba}                                                          & CPRF8                                                                                                                                                                           \\ \hline
+\endfirsthead
+%
+\multicolumn{2}{c}%
+{{\bfseries Tabla \thetable\ Continuación de la página anterior}} \\
+\endhead
+%
+\textbf{Versión}                                                                        & 1.0                                                                                                                                                                             \\ \hline
+\textbf{Nombre}                                                                         & Caso de prueba para adquisición de archivo base.                                                                                                                                \\ \hline
+\textbf{\begin{tabular}[c]{@{}l@{}}Identificador de \\ requerimiento\end{tabular}}      & RF1.7.2                                                                                                                                                                         \\ \hline
+\textbf{Propósito}                                                                      & \begin{tabular}[c]{@{}l@{}}Identificar el funcionamiento del sistema al crear el \\ archivo “conjuntoP” que posee la información de\\  cada uno de los compuestos.\end{tabular} \\ \hline
+\textbf{Dependencias}                                                                   & \begin{tabular}[c]{@{}l@{}}Correcta obtención de la información necesaria \\ de los compuestos y la requerida para la(s) \\ proteína(s) objetivo.\end{tabular}                  \\ \hline
+\textbf{\begin{tabular}[c]{@{}l@{}}Ambiente de \\ prueba/configuración\end{tabular}}    & \begin{tabular}[c]{@{}l@{}}- Hardware: Equipo de computo\\ (preferentemente portatíl)\\ - Software: Compilador python3, \\ IDE y/o editor de texto.\end{tabular}                \\ \hline
+\textbf{Inicialización}                                                                 & \begin{tabular}[c]{@{}l@{}}- Codificación correspondiente al \\ requerimiento.\\ - Directorio y existencia de los \\ archivos correspondiente a los compuestos.\end{tabular}    \\ \hline
+\textbf{Finalización}                                                                   & N/A                                                                                                                                                                             \\ \hline
+\textbf{Acciones}                                                                       & \begin{tabular}[c]{@{}l@{}}- Compilar el código correspondiente.\\ - Contar con los archivos creados para cada uno\\  de los datos de interés de cada proteína.\end{tabular}    \\ \hline
+\textbf{\begin{tabular}[c]{@{}l@{}}Descripción de los \\ datos de entrada\end{tabular}} & \begin{tabular}[c]{@{}l@{}}- Nombre del compuesto.\\ - Directorio y nombre de cada uno de los \\ archivos para la(s) proteína(s).\end{tabular}                                  \\ \hline
+\textbf{Salida esperada}                                                                & \begin{tabular}[c]{@{}l@{}}Notificación de adecuada de creación y \\ modificación del conjuntoP.\end{tabular}                                                                  \\ \hline
+\textbf{Salida obtenida}                                                                &   \begin{tabular}[c]{@{}l@{}}
+Notificación de los resultados de \\búsqueda.
+\end{tabular}                                                                                                                                                                               \\ \hline
+\textbf{Resultado}                                                                      &   \begin{tabular}[c]{@{}l@{}}
+Se visualiza la pantalla de la \\
+búsqueda finalizada.\\
+Se construye el conjunto P de cada\\
+compuesto adecuadamente.
+
+\end{tabular}                                                                                                                                                                              \\ \hline
+\textbf{Severidad}                                                                      &     \textbf{- Media}                                                                                                                                                                            \\ \hline
+\textbf{Evidencia}                                                                      &   Evidencia en la imagen \ref{CPRF8}                                                                                                                                                                            \\ \hline
+\textbf{Estado}                                                                         & \begin{tabular}[c]{@{}l@{}}
+Iniciado.\\
+Se debe realizar segunda prueba para\\
+los resultados de búsqueda.
+\end{tabular}                                                                                                                                                                    \\ \hline
+\end{longtable}

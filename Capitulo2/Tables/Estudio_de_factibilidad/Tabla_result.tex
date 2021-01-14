@@ -1,0 +1,22 @@
+% Please add the following required packages to your document preamble:
+% \usepackage{longtable}
+% Note: It may be necessary to compile the document several times to get a multi-page table to line up properly
+\begin{longtable}{|l|c|}
+\caption{Resultados de encuesta}
+\label{Resul_encu}\\
+\hline
+Posibles respuestas & \multicolumn{1}{l|}{Resultados} \\ \hline
+\endfirsthead
+%
+\multicolumn{2}{c}%
+{{\bfseries Tabla \thetable\ Continuación de la página anterior}} \\
+\endhead
+%
+Rápido              & 3                               \\ \hline
+Intuitivo           & 2                               \\ \hline
+Preciso             & 15                              \\ \hline
+Ordenado            & 10                              \\ \hline
+Fácil de utilizar   & 12                              \\ \hline
+Económico           & 8                               \\ \hline
+Seguro              & 10                              \\ \hline
+\end{longtable}

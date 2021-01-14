@@ -1,0 +1,40 @@
+% Please add the following required packages to your document preamble:
+% \usepackage{longtable}
+% Note: It may be necessary to compile the document several times to get a multi-page table to line up properly
+\begin{longtable}{|l|l|}
+\caption{Caso de prueba RF2.4}
+\label{CP_RF2_4}\\
+\hline
+\textbf{ID del Caso de prueba}                                                          & CPRF12                                                                                                                                                                           \\ \hline
+\endfirsthead
+%
+\multicolumn{2}{c}%
+{{\bfseries Tabla \thetable\ Continuación de la página anterior}} \\
+\endhead
+%
+\textbf{Versión}                                                                        & 1.0                                                                                                                                                                              \\ \hline
+\textbf{Nombre}                                                                         & Caso de prueba para Modelado QSAR.                                                                                                                                               \\ \hline
+\textbf{\begin{tabular}[c]{@{}l@{}}Identificador de \\ requerimiento\end{tabular}}      & RF2.4                                                                                                                                                                            \\ \hline
+\textbf{Propósito}                                                                      & - Identificar el funcionamiento del proceso QSAR.                                                                                                                                \\ \hline
+\textbf{Dependencias}                                                                   & \begin{tabular}[c]{@{}l@{}}- Correcta obtención de los datos correspondientes \\ a el compuesto y proteína.\end{tabular}                                                         \\ \hline
+\textbf{\begin{tabular}[c]{@{}l@{}}Ambiente de \\ prueba/configuración\end{tabular}}    & \begin{tabular}[c]{@{}l@{}}- Hardware: Equipo de computo\\ (preferentemente portatíl)\\ - Software: Compilador python3, \\ IDE y/o editor de texto.\end{tabular}                 \\ \hline
+\textbf{Inicialización}                                                                 & \begin{tabular}[c]{@{}l@{}}- Codificación correspondiente al requerimiento.\\ - Mantenimiento del valor establecido a las \\ variables de los compuesto y proteína.\end{tabular} \\ \hline
+\textbf{Finalización}                                                                   & N/A                                                                                                                                                                              \\ \hline
+\textbf{Acciones}                                                                       & \begin{tabular}[c]{@{}l@{}}- Compilar el código correspondiente.\\ \\ \\ - Contar los datos necesarios del compuesto \\ y proteína.\end{tabular}                                 \\ \hline
+\textbf{\begin{tabular}[c]{@{}l@{}}Descripción de los \\ datos de entrada\end{tabular}} & \begin{tabular}[c]{@{}l@{}}- Nombre del compuesto.\\ - Descriptores del compuesto.\\ - Estructura  molecular del compuesto.\\ - Actividad biológica del compuesto\end{tabular}   \\ \hline
+\textbf{Salida esperada}                                                                & \begin{tabular}[c]{@{}l@{}}- Notificación del modelado, ya se correcto \\ o incorrecto.\end{tabular}                                                                             \\ \hline
+\textbf{Salida obtenida}                                                                &  \begin{tabular}[c]{@{}l@{}}
+- El procedimiento se lleva a cabo, y todo\\
+se observa en la terminal,  junto con el \\
+proceso de Docking que se requiere para el\\
+modelado QSAR.
+\end{tabular}                                                                                                                                                                                 \\ \hline
+\textbf{Resultado}                                                                      &   \begin{tabular}[c]{@{}l@{}}
+- Se logra supervisar el funcionamiento del \\
+modelado QSAR, y al obtenerse adecuadamente \\
+los resultados.
+\end{tabular}                                                                                                                                                                                \\ \hline
+\textbf{Severidad}                                                                      &     Nula                                                                                                                                                                             \\ \hline
+\textbf{Evidencia}                                                                      &     Evidencia en la imagen \ref{CPRF12}                                                                                                                                                                             \\ \hline
+\textbf{Estado}                                                                         & No Iniciado.                                                                                                                                                                     \\ \hline
+\end{longtable}

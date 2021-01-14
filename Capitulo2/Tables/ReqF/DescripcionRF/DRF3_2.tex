@@ -1,0 +1,35 @@
+% Please add the following required packages to your document preamble:
+% \usepackage{longtable}
+% Note: It may be necessary to compile the document several times to get a multi-page table to line up properly
+\begin{longtable}{|l|l|}
+\caption{Requerimiento funcional 3.2}
+\label{RF3_2}\\
+\hline
+\begin{tabular}[c]{@{}l@{}}Nombre del requerimiento funcional:\\ Diseño gráfico de resultados\end{tabular}                                                   & ID: RF3.2                                                                                          \\ \hline
+\endfirsthead
+%
+\multicolumn{2}{c}%
+{{\bfseries Tabla \thetable\ Continuación de la página anterior}} \\
+\endhead
+%
+\multicolumn{2}{|l|}{Área: Muestra de resultados finales.}                                                                                                                                                                                                        \\ \hline
+\multicolumn{2}{|l|}{Actor(es): Conjunto final.}                                                                                                                                                                                                                  \\ \hline
+\multicolumn{2}{|l|}{Interesados: Sistema y/o usuario del sistema.}                                                                                                                                                                                               \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{@{}l@{}}Descripción: El sistema obtiene el archivo que contiene la lista ordenada \\ la cual será utilizada para desplegar de manera gráfica  al usuario.\end{tabular}}                                                   \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{@{}l@{}}Evento desencadenador: Tras haber realizado los respectivos cálculos\\ entre los efectos de cada uno de los compuestos de interés de evaluación\\ del sistema y la construcción del conjunto final.\end{tabular}} \\ \hline
+\multicolumn{2}{|l|}{Tipo de desencadenador: Temporal.}                                                                                                                                                                                                           \\ \hline
+Pasos realizados (ruta principal)                                                                                                                            & Información para los pasos                                                                         \\ \hline
+\begin{tabular}[c]{@{}l@{}}1.- El sistema obtiene el archivo con la\\ lista ordenada.\end{tabular}                                                           & No requiere información.                                                                           \\ \hline
+\begin{tabular}[c]{@{}l@{}}2.- El sistema muestra de manera gráfica\\ el nombre del compuesto y su aptitud\\ obtenida del archivo.\end{tabular}              & \begin{tabular}[c]{@{}l@{}}Archivo de texto plano con \\ lista ordenada.\end{tabular}              \\ \hline
+\multicolumn{2}{|l|}{Extensiones o Rutas alternativas.}                                                                                                                                                                                                           \\ \hline
+\multicolumn{1}{|c|}{N/A}                                                                                                                                      & \multicolumn{1}{c|}{N/A}                                                                             \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{@{}l@{}}Precondiciones: El ordenamiento de los compuestos y su aptitud, fue\\ correcto o no existió error en su ejecución del módulo anterior.\end{tabular}}                                                              \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{@{}l@{}}Postcondiciones: El sistema muestra al usuario de manera gráfica la lista\\ ordenada de los compuestos y su aptitud.\end{tabular}}                                                                                \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{@{}l@{}}Suposiciones: El cálculo de los compuestos se realizó con éxito y el\\ sistema recibe el conjunto final sin errores.\end{tabular}}                                                                                \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{@{}l@{}}Garantía de éxito: El sistema muestra los resultados de manera gráfica y\\ el sistema se encuentra listo para realizar otro cálculo.\end{tabular}}                                                                \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{@{}l@{}}Garantía mínima: El sistema muestra los resultados y espera su reinicio\\ para realizar un nuevo cálculo.\end{tabular}}                                                                                           \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{@{}l@{}}Requerimientos cumplidos: Validación de los datos obtenidos de los\\ compuestos y patología; Cálculo de las aptitudes con éxito.\end{tabular}}                                                                    \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{@{}l@{}}Cuestiones pendientes: Considerar el formato de muestra de resultados\\ obtenidos por el sistema.\end{tabular}}                                                                                                   \\ \hline
+\multicolumn{2}{|l|}{Prioridad: Alta.}                                                                                                                                                                                                                            \\ \hline
+\multicolumn{2}{|l|}{Riesgo: Alto.}                                                                                                                                                                                                                               \\ \hline
+\end{longtable}

@@ -1,0 +1,21 @@
+% Please add the following required packages to your document preamble:
+% \usepackage{longtable}
+% Note: It may be necessary to compile the document several times to get a multi-page table to line up properly
+\begin{longtable}{|l|l|l|}
+\caption{Especificación de requisitos de operación y seguridad}
+\label{Especificacion_de_req_op_seg}\\
+\hline
+\textbf{ID Requerimiento} & \textbf{Nombre}              & \textbf{Descripción}                                                                                                                                                                                                                                                    \\ \hline
+\endfirsthead
+%
+\multicolumn{3}{c}%
+{{\bfseries Tabla \thetable\ Continuación de la página anterior}} \\
+\endhead
+%
+RFS1                      & Control de modificaciones.   & \begin{tabular}[c]{@{}l@{}}Se debe generar una\\ bitácora de la tarea a \\ realizar indicando:\\ - Actividad realizada.\\ - Indicación de módulo\\ de proceso modificado.\\ - Miembro que lo realizó.\end{tabular}                                                      \\ \hline
+RFS2                      & Revisión de versiones.       & \begin{tabular}[c]{@{}l@{}}A través de la herramienta \\ Git, logrando llevar a cabo \\ un seguimiento del \\ versionado del sistema.\end{tabular}                                                                                                                      \\ \hline
+RFS3                      & Acceso a Archivo             & \begin{tabular}[c]{@{}l@{}}Garantizar, que si el usuario\\ desea ver la información\\ existente en los archivos, \\ sea solo vista.\end{tabular}                                                                                                                        \\ \hline
+RFS4                      & Negación de modificación     & \begin{tabular}[c]{@{}l@{}}Se debe de garantizar, que\\ los archivos donde se\\ almacene la información \\ obtenida, sea solo \\ modificada por el sistema.\end{tabular}                                                                                                \\ \hline
+RFS5                      & Modificación al sistema      & \begin{tabular}[c]{@{}l@{}}El usuario, no tendrá la \\ capacidad de modificar o\\ alterar configuraciones \\ del sistema, más que \\ aspectos de visualización \\ e interfaz gráfica.\end{tabular}                                                                      \\ \hline
+RFS6                      & Acceso a las bases de datos. & \begin{tabular}[c]{@{}l@{}}No habrá manera en la\\ que se modifique el \\ acceso a las bases de \\ datos para la recolección \\ de información.\\ - Cambios en la \\ dirección de la \\ base de datos.\\ - Alteración en el \\ driver para la \\ conexión.\end{tabular} \\ \hline
+\end{longtable}

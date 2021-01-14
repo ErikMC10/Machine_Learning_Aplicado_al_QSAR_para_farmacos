@@ -1,0 +1,194 @@
+\lhead{Capítulo \ref{ch_2-1}}
+\rhead{\newtitle}
+\cfoot{\thepage}
+\renewcommand{\headrulewidth}{1pt}
+\renewcommand{\footrulewidth}{1pt}
+
+\chapter{Planificación de Sistemas de Información}\label{ch_2-1}
+%Planificación: la 3, la 5.
+%Viabilidad: la 1, 2, 4, 6.
+\noindent Se tiene como objetivo la obtención de un marco de referencia para el desarrollo del sistema de información que responda a los objetivos estratégicos planteados. Este marco de referencia consta de:\\
+
+\begin{itemize}
+    \item Una descripción de la situación actual, que constituirá el punto de partida del Plan de Sistemas de Información. Dicha descripción incluirá un análisis técnico de puntos fuertes y riesgos, así como el análisis de servicio a los objetivos de la organización.
+    \item Un conjunto de modelos que constituya la arquitectura de información.
+    \item Una propuesta de calendario para la ejecución de dichos proyectos.
+    \item Un plan de seguimiento y cumplimiento de todo lo propuesto mediante unos mecanismos de evaluación adecuados.
+\end{itemize}
+
+\section{Estudio de la Información Relevante}{
+\noindent Los animales son ampliamente utilizados en la experimentación científica para el desarrollo de medicinas y para probar la seguridad de otros productos. Dados los recientes avances en la Bioinformática, especialmente en el modelado in-silico (asistido por computadora) como lo es QSAR, y los algoritmos que realizan predicciones como los pertenecientes al área de \textit{Machine Learning}, el proceso de la experimentación tiene una visión diferente en cuanto a la forma en que se realiza.\\
+
+\noindent QSAR es una metodología que reúne un conjunto de modelos computacionales relacionados con el diseño, la visualización espacial, la virtualización de moléculas y el cálculo de sus propiedades fisicoquímicas, mediante la Bioinformática y la Estadística. Todo esto con el objetivo de hacer una predicción de la actividad biológica referente a los compuestos seleccionados, que permita el diseño teórico de posibles nuevos fármacos, evitando pasar por el proceso de prueba y error de la síntesis orgánica.\\
+
+\noindent Los modelos QSAR son ecuaciones matemáticas donde se relaciona la actividad biológica con descriptores moleculares o información fisicoquímica de una estructura química \cite{anex_1}. Para poder construir un modelo de QSAR debemos tomar en cuenta un número de moléculas con valores conocidos de actividad biológica.
+Posteriormente, se calculan algunos descriptores moleculares en los que destacan los de tipo fisicoquímico, constitucional, geométrico, topológico y electrónico, estos se calculan a partir de una estructura virtual 3D por métodos computacionales, por lo que son un reflejo cuantitativo o describen numéricamente a cada una de las moléculas. Estos pueden ser de diferentes tipos, y ello depende de la complejidad de información que requiera el cálculo. El número de descriptores a considerar está en función de las herramientas computacionales de cálculo con que se cuente y del número de moléculas incluidas en el estudio, estos descriptores se usan como
+variables independientes en la ecuación QSAR.\\
+
+\subsection{\textit{Machine Learning}}
+
+\noindent Por otra parte, \textit{Machine Learning} es un subcampo de las Ciencias de la computación que se enfoca al desarrollo de técnicas que permiten predecir comportamientos futuros mediante la recolección de datos y el diseño de algoritmos, por lo que es usado en gran cantidad de aplicaciones y estudios de la Bioinformática, pues la principal meta de estas técnicas es adquirir exitosamente información útil por medio de la elaboración de abstracción probabilística. En general consiste en programas computacionales, para optimizar un proceso utilizando algún dato como ejemplo o experiencia previamente adquirida.\\
+
+\noindent El objetivo principal del \textit{Machine Learning} es crea un sistema que aprenda automáticamente. Aprender en este contexto quiere decir identificar patrones complejos en millones de datos. Lo que realmente aprende una máquina es un algoritmo que revisa los datos y es capaz de predecir comportamientos futuros.\\
+
+\noindent Existen distintos algoritmos en el campo del \textit{Machine Learning}, en los cuales destaca la regresión lineal simple y regresión lineal múltiple, esto por ser pieza fundamental dentro de los demás algoritmos (Redes Neuronales, Maquina de soporte vectorial , etc).\\
+
+\noindent La regresión lineal múltiple permite generar un modelo lineal en el que el valor de la variable dependiente o respuesta (Y) se determina a partir de un conjunto de variables independientes llamadas predictores (X1, X2, X3…). Es una extensión de la regresión lineal simple, por lo que es fundamental comprender esta última. Los modelos de regresión múltiple pueden emplearse para predecir el valor de la variable dependiente o para evaluar la influencia que tienen los predictores sobre ella (esto último se debe que analizar con cautela para no malinterpretar causa-efecto).
+
+Los modelos lineales múltiples siguen la siguiente ecuación:
+
+\begin{equation}
+    Y_i = (\beta_0 + \beta_1 X_1i + \beta_2 X_2i + ... + \beta_n X_ni ) + e_i
+\end{equation}
+
+\begin{itemize}
+   
+ \item $\beta_0$: Es la ordenada en el origen, el valor de la variable dependiente Y cuando todos los predictores son cero.\\
+
+\item $\beta_i$: Es el efecto promedio que tiene el incremento en una unidad de la variable predictora $X_i$ sobre la variable dependiente $Y$, manteniéndose constantes el resto de variables. Se conocen como coeficientes parciales de regresión.
+\item $e_i$: Es el residuo o error, la diferencia entre el valor observado y el estimado por el modelo.
+\end{itemize}
+
+\noindent Es importante tener en cuenta que la magnitud de cada coeficiente parcial de regresión depende de las unidades en las que se mida la variable predictora a la que corresponde, por lo que su magnitud no está asociada con la importancia de cada predictor. Para poder determinar qué impacto tienen en el modelo cada una de las variables, se emplean los coeficientes parciales estandarizados, que se obtienen al estandarizar (sustraer la media y dividir entre la desviación estándar) las variables predictoras previo ajuste del modelo.
+
+\subsubsection{Condiciones para la regresión lineal múltiple}
+\noindent Los modelos de correlación lineal múltiple requieren de las mismas condiciones que los modelos lineales simples más otras adicionales.\\
+
+\textit{No colinialidad o multicolinialidad}\\
+
+\noindent En los modelos lineales múltiples los predictores deben ser independientes, no debe de haber colinialidad entre ellos. La colinialidad ocurre cuando un predictor está linealmente relacionado con uno o varios de los otros predictores del modelo o cuando es la combinación lineal de otros predictores. Como consecuencia de la colinialidad no se puede identificar de forma precisa el efecto individual que tiene cada una de las variables colineales sobre la variable respuesta, lo que se traduce en un incremento de la varianza de los coeficientes de regresión estimados hasta el punto que resulta prácticamente imposible establecer su significancia estadística.\\
+
+\noindent No existe un método estadístico concreto para determinar la existencia de colinialidad o multicolinialidad entre los predictores de un modelo de regresión, sin embargo, se han desarrollado numerosas reglas prácticas que tratan de determinar en qué medida afecta a la estimación y contraste de un modelo. Los pasos recomendados a seguir son:
+
+\begin{itemize}
+    \item Si el coeficiente de determinación $\mathcal{R}^2$ es alto pero ninguno de los predictores resulta significativo, hay indicios de colinialidad.
+    \item Calcular una matriz de correlación en la que se estudia la relación lineal entre cada par de predictores. Es importante tener en cuenta que, a pesar de no obtenerse ningún coeficiente de correlación alto, no está asegurado que no exista multicolinialidad. Se puede dar el caso de tener una relación lineal casi perfecta entre tres o más variables y que las correlaciones simples entre pares de estas mismas variables no sean mayores que 0.5.
+    \item Generar un modelo de regresión lineal simple entre cada uno de los predictores frente al resto. Si en alguno de los modelos el coeficiente de determinación $\mathcal{R}^2$ es alto, estaría señalando a una posible colinialidad.
+    \item Tolerancia (TOL) y Factor de Inflación de la Varianza (VIF). Se trata de dos parámetros que vienen a cuantificar lo mismo (uno es el inverso del otro). El VIF de cada predictor se calcula según la siguiente fórmula:
+\end{itemize}
+
+\begin{equation}
+    VIF_(\hat{\beta}_j) = \frac{1}{1 - R^2}
+\end{equation}
+
+\begin{equation}
+    Tolerancia_(\hat{\beta}_j) = \frac{1}{VIF_(\hat{\beta}_j)}
+\end{equation}
+
+Donde $\mathcal{R}^2$ se obtiene de la regresión del predictor $X_j$ sobre los otros predictores. Esta es la opción más recomendada, los límites de referencia que se suelen emplear son:
+
+\begin{itemize}
+    \item VIF = 1: Ausencia total de colinialidad
+    \item 1 < VIF < 5: La regresión puede verse afectada por cierta colinialidad.
+    \item 5 < VIF < 10: Causa de preocupación
+    \item El termino tolerancia es 1/VIF por lo que los límites recomendables están entre 1 y 0.1.
+\end{itemize}
+
+\noindent En caso de encontrar colinialidad entre predictores, hay dos posibles soluciones. La primera es excluir uno de los predictores problemáticos intentando conservar el que, a juicio del investigador, está influyendo realmente en la variable respuesta. Esta medida no suele tener mucho impacto en el modelo en cuanto a su capacidad predictiva ya que, al existir colinialidad, la información que aporta uno de los predictores es redundante en presencia del otro. La segunda opción consiste en combinar las variables colineales en un único predictor, aunque con el riesgo de perder su interpretación.
+
+
+\subsection{\textit{Docking}}{
+\noindent El acoplamiento molecular es un método computacional utilizado para predecir la interacción de dos moléculas que generan un modelo de unión. En muchas aplicaciones de descubrimiento de fármacos, el acoplamiento se realiza entre una molécula pequeña y una macromolécula, por ejemplo, el acoplamiento de proteínas y ligandos. Más recientemente, el acoplamiento también se aplica para predecir el modo de unión entre dos macromoléculas, por ejemplo, el acoplamiento proteína-proteína.\\
+
+\noindent Actualmente, la mecánica molecular es la base de la mayoría de los programas de acoplamiento. La mecánica molecular implica la descripción de un sistema poliatómico utilizando la física clásica. Los parámetros experimentales como las cargas, los ángulos de torsión y geométricos se utilizan para reducir la diferencia entre los datos experimentales y las predicciones de la mecánica molecular (Lopes, Guvench y Mackerell, 2015). Debido a las deficiencias y limitaciones de los parámetros experimentales, las ecuaciones matemáticas a menudo se pueden parametrizar sobre la base de cálculos semiempíricos y ab teóricos de mecánica cuántica. Como tal, los campos de fuerza molecular son conjuntos de ecuaciones con diferentes parámetros con el propósito final de describir los sistemas. Como los campos de fuerza pueden usar diferentes consideraciones y simplificaciones, la descripción del sistema puede ser inexacta debido al nivel de teoría involucrado (física clásica).\\
+
+\noindent La mayoría de los campos de fuerza se basan en cinco términos, todos los cuales tienen una interpretación física: energía potencial, términos de torsión, geometría de enlace, términos electrostáticos y potencial de Lenard-Jones (Monticelli y Tieleman, 2013).\\
+
+\noindent Con el uso de campos de fuerza, el modelado molecular y de proteínas se logró a principios de la década de 1980. Una extensión natural de estos métodos fue el modelado de procesos moleculares como la unión de proteínas y ligandos.\\
+\noindent Se desarrollaron dos metodologías generales. Primero, el enfoque de cuerpo rígido que está estrechamente relacionado con el modelo clásico de Emil Fischer. En este modelo, el ligando y el receptor se consideran dos cuerpos independientes que se reconocen entre sí en función de la forma y el volumen.\\
+\noindent El segundo enfoque es el acoplamiento flexible. Este enfoque considera un efecto recíproco del reconocimiento de proteínas y ligandos en la conformación de cada parte (Dastmalchi, 2016).
+
+\subsection{Recomendaciones generales y pautas para el acoplamiento}
+
+\subsubsection{Requisitos de hardware y software para acoplamiento molecular}
+
+\noindent Antes de abordar los detalles científicos de la metodología de acoplamiento, comentaremos los requisitos generales de hardware para ejecutar el acoplamiento de manera eficiente. Por lo general, un cálculo de acoplamiento no se considera intensivo en CPU, ya que los ligandos se pueden acoplar y evaluar en un par de minutos. Actualmente, casi cualquier computadora personal (o computadora portátil) es lo suficientemente competente como para ejecutar una pequeña campaña de acoplamiento (alrededor de 500-1000 compuestos) en un tiempo razonable. Sin embargo, la detección virtual basada en el acoplamiento de repositorios públicos puede aumentar rápidamente (más de 106 compuestos), lo que requiere más recursos informáticos para terminar en un par de semanas. La Tabla II presenta las pautas generales recomendadas para una computadora antes de ejecutar el acoplamiento.\\
+
+
+\subsubsection{Preparación de ligando y proteína}
+\noindent El sistema debe seleccionarse y prepararse cuidadosamente antes de hacer cualquier cálculo. El primer paso es obtener una estructura de la proteína, preferiblemente con un ligando unido. ¿Qué estructura se debe usar? Se recomienda considerar estructuras tridimensionales con alta resolución o estructuras cristalizadas con ligandos de alta afinidad o sustratos naturales. Para algunas proteínas, esto puede no ser siempre el caso. En tales casos, se pueden utilizar estructuras con informes previos de atraque o estudios estructurales.\\
+
+\noindent Como se mencionó anteriormente, el acoplamiento requiere la asignación de varios parámetros. La información contenida en un archivo del Protein Data Bank (PDB) a menudo es insuficiente y, por lo tanto, se requiere la rectificación de los archivos PDB. En la práctica, hay varios módulos de preparación disponibles (Tabla \ref{Tabla_Docking}), la mayoría de ellos pueden corregir problemas comunes en archivos PDB. Sin embargo, se ha demostrado que a menudo se pasan por alto algunos aspectos estructurales (Warren, Do, Kelley, Nicholls y Warren, 2012).
+
+\begin{longtable}{|l|l|l|}
+\caption{Software utilizado para la preparación de proteínas y ligandos.}
+\label{Tabla_Docking}
+\hline
+\multicolumn{1}{|c|}{Software} & \multicolumn{1}{c|}{Tipo} & \multicolumn{1}{c|}{Características}                                                                                                                                                                                             \endfirsthead 
+\hline
+Autodock Tools                 & Académico                 & \begin{tabular}[c]{@{}l@{}}Limpieza de la estructura, asignación \\de carga (Gasteiger), selección del \\rotador y predicción del sitio de unión.\end{tabular}                                                                   \\ 
+\hline
+Openbabel                      & Código abierto            & \begin{tabular}[c]{@{}l@{}}Asignación de carga, múltiples formatos\\de archivo compatibles, conversión de archivos\end{tabular}                                                                                                  \\ 
+\hline
+MOE                            & Comercial                 & \begin{tabular}[c]{@{}l@{}}Corrección de problemas de residuos, \\limpieza de estructuras, asignación de \\carga basada en varios campos de fuerza, \\minimización de proteínas y predicción del sitio \\de unión.\end{tabular}  \\
+\hline
+\end{longtable}
+}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Estudio de los Sistemas de Información Actuales}{
+\noindent Las técnicas de \textit{Machine Learning} y la metodología de QSAR pueden enfocarse al ámbito de la Bioinformática para diseñar un sistema que realice el proceso de la experimentación científica con mayor rapidez, obteniendo mejores resultados, y reduciendo el uso de seres vivos para dicho proceso.\\
+
+\noindent En la actualidad, este tipo de sistemas ya son una realidad. Un ejemplo es el software Virtual Assay, desarrollado por la Universidad de Oxford, que provee un marco de trabajo para realizar pruebas in-silico en poblaciones de modelos de células cardíacas humanas para predicciones de seguridad y eficacia de fármacos, bajo la justificación de que cada individuo responde de manera única a cierto fármaco, y que el proceso de la experimentación es costoso y poco eficaz.\\
+
+\noindent Otros métodos utilizados como los Organs-on-chips diseñados por el Instituto Wyss de Harvard, que son esencialmente secciones transversales tridimensionales de unidades funcionales principales de órganos vivos completos, o los modelos de tejido vendidos por MatTek, que proporcionan una plataforma micro-fisiológica para modelar biología humana altamente relevante y predictiva. Ambas iniciativas, pertenecientes a la clasificación in-vitro (uso de células y tejido), junto con Virtual Assay, representan las opciones más relevantes para intentar cambiar la forma en la que se realiza el proceso de la experimentación clásica.\\
+
+En la tabla \ref{productos1} se detalla a cada uno de los ejemplos mencionados, incluyendo a la solución propuesta.
+
+\noindent Para el caso del \textit{Docking} existen en la actualidad sistemas y herramientas que fueron desarrolladas para ofrecer la automatización de este proceso, en la Tabla \ref{Herramienta_Dock} podemos observar estas herramientas.
+Dichas herramientas nos ayudan a crear un proceso de acoplamiento molecular desde cero, algunas herramientas nos permiten realizar la preparación del ligando/proteína como el software AutoDock, podemos observar la Tabla \ref{Tabla_Docking} que nos muestra las herramientas que permiten realizar este procedimiento.
+
+\begin{longtable}{|l|l|l|l|}
+\caption{ Ejemplos de software disponible para el acoplamiento de proteínas y ligandos y su algoritmo de búsqueda}\\ 
+\hline
+\label{Herramienta_Dock}
+\multicolumn{1}{|c|}{Nombre} & Algoritmo de búsqueda                                                                  & \multicolumn{1}{c|}{Tipo~} & \multicolumn{1}{c|}{Referencias}                                                          \endfirsthead 
+\hline
+AUTODOCK4                    & \begin{tabular}[c]{@{}l@{}}Algoritmo genético\\~\& lamarckiano, 2003\end{tabular}   & Académico                  & Morris et al., 2009                                                                       \\ 
+\hline
+HADDOCK                      & Híbrido                                                                                                     & Académico                  & \begin{tabular}[c]{@{}l@{}}Dominguez, Boelens\\~\& Bonvin, 2003\end{tabular}              \\ 
+\hline
+VINA                         & Optimización local                                                                                                                              & Académico                  & Trott  Olson, 2009                                                                        \\ 
+\hline
+LIGANDFIT                    & Coincidencia de forma                                                                                       & Comercial                  & \begin{tabular}[c]{@{}l@{}}Venkatachalam, Jiang,\\Oldfield \& Waldman, 2003\end{tabular}  \\ 
+\hline
+DOCK                         & Coincidencia de forma                                                                                      & Académico                  & Allen et al., 2015                                                                        \\ 
+\hline
+MOE                          & Híbrido                                                                                                     & Comercial                  & Vilar, Cozza  Moro, 2008                                                                  \\
+\hline
+\end{longtable}
+
+}\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Establecimiento del Alcance del Sistema}{
+\noindent La experimentación, dentro de la industria farmacéutica, es una parte indispensable para el desarrollo de nuevos medicamentos que contribuyen a mejorar la salud humana. Por desgracia, este proceso implica el uso de animales como “sujetos de prueba”, poniendo en riesgo las vidas de otros seres vivos para hacer mejor la vida de los seres humanos. En la actualidad, los métodos de \textit{Machine Learning} y los modelos de QSAR permiten tener una visión más novedosa y menos egoísta hacia la experimentación, en la cual se haga uso de las ventajas que ofrece la tecnología para realizar este proceso involucrando el menor número de animales posible. Las capacidades del uso de la tecnología aplicadas al campo de la experimentación permitirían mejorar en gran medida dicha situación, tanto en costos, ya que no se tendría que gastar en la compra y mantenimiento de animales, como en ética, promoviendo una cultura en la que se respete el derecho a la vida para todo organismo.\\
+
+\noindent Pro eso el objetivo principal es desarrollar un sistema basado en los modelos de QSAR (Quantitative Structure-Activity Relationship) y los métodos de Machine Learning usando el algoritmo de regresión lineal que permitirá simular el procedimiento de un experimento químico en un entorno computacional, el cual tendrá como resultado un conjunto de actividades biológicas que brinden información acerca de los beneficios o problemas de algún compuesto frente a ciertas proteínas, y representando una alternativa a la experimentación que involucra el uso de seres vivos.
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\section{Estudio de la Situación Actual}{
+\begin{longtable}{|c|l|c|}
+\caption{Resumen de productos similares.}\\ 
+\hline
+SOFTWARE                                                                                 & \multicolumn{1}{c|}{CARACTERíSTICAS}                                                                                                                                                                                                                                                         & PRECIO EN EL MERCADO                                                        \endfirsthead 
+\hline
+\textit{Virtual Assay}                                                                   & \begin{tabular}[c]{@{}l@{}}- Marco de trabajo para la\\ realización de experimentos por\\ medio del modelado por\\ computadora.\\ - Enfocado a la cardiología.\\ - Su método de trabajo es el\\ ajuste de modelos \\ celulares comparados con\\ experimentaciones previas. \end{tabular}   & NO COMERCIAL                                                                \\ 
+\hline
+\textit{Organs-on-Chips}                                                                 & \begin{tabular}[c]{@{}l@{}}- Se basa en el uso de células\\ vivas, adaptadas en pequeños\\ chips.\\ - Permiten la observación de las\\ células humanas y su reacción\\ ante enfermedades específicas.\\ - Es un método in-vitro,\\ no involucra el uso de un \\ software. \end{tabular} & \begin{tabular}[c]{@{}c@{}}\$,495 USD por placa\\ (6 chips). \end{tabular}  \\ 
+\hline
+\begin{tabular}[c]{@{}c@{}}\textit{Modelos de tejido }\\\textit{ MatTek's} \end{tabular} & \begin{tabular}[c]{@{}l@{}} - Son modelos de tejido 3D\\ vivos y metabólicamente \\ activos.\\ - Es un método in-vitro.\\ - Actualmente tiene modelos\\ para pruebas oculares,\\ dermatológicas, intestinales y\\ genitales. \end{tabular}                                                 & SIN INFORMACIÓN                                                             \\ 
+\hline
+\textit{Solución propuesta}                                                             & \begin{tabular}[c]{@{}l@{}}- Se basa en el modelado\\ matemático de QSAR.\\ - Es un método in-silico.\\ - Utiliza \textit{Machine Learning} \\ para asistir y complementar\\ los resultados de QSAR. \end{tabular}                                                                          & N/A                                                                         \\
+\hline
+\end{longtable}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Selección de la Solución}{
+\noindent Desarrollar un sistema informático basado en el modelo QSAR (Quantitative Structure-Activity Relationship) utilizando algoritmos de \textit{Machine Learning} (Regresión Lineal) que permitirá simular la experimentación química en un entorno computacional. El sistema tomara una serie de entradas (Lista compuestos y lista de proteínas) para obtener las estructuras moleculares de cada uno de ellos, de igual manera se tiene contemplado el uso de la actividad biológica y sus descriptores de cada compuesto.\\
+
+\noindent Esta información sera procesada por nuestro sistema y a través del procedimiento de acoplamiento molecular (Docking) generar las variables necesarias para generar una regresión múltiple y poder predecir el comportamiento biológico de cada uno de los compuestos contra una proteína.\\
+
+\noindent Estos resultados serán representados a través de una tabla que sera ordenada de mayor a menor 'efectividad' para adherirse y contrarrestar el funcionamiento de dicha proteína.\\
+\noindent El sistema realizara un aprendizaje autónomo gracias al modelo que generara la regresión lineal múltiple por lo cual su eficiencia mejorara con cada iteración que se realice en el sistema. 
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

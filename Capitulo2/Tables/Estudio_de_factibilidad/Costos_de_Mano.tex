@@ -1,0 +1,20 @@
+% Please add the following required packages to your document preamble:
+% \usepackage{longtable}
+% Note: It may be necessary to compile the document several times to get a multi-page table to line up properly
+\begin{longtable}{|l|l|l|l|}
+\caption{Costos por mano de obra}
+\label{Costos_por_mano_de_obra}\\
+\hline
+\textbf{NOMBRE}              & \textbf{CANTIDAD} & \textbf{TIEMPO} & \textbf{\begin{tabular}[c]{@{}l@{}}COSTO EN EL\\ MERCADO\end{tabular}} \\ \hline
+\endfirsthead
+%
+\multicolumn{4}{c}%
+{{\bfseries Tabla \thetable\ Continuación de la página anterior}} \\
+\endhead
+%
+Project Manager              & 1                 & 12 meses        & \$15,000.00                                                            \\ \hline
+Tester                       & 1                 & 12 meses        & \$17,000.00                                                            \\ \hline
+Desarrollador Front-End y UI & 1                 & 12 meses        & \$15,000.00                                                            \\ \hline
+Desarrollador Back-End       & 3                 & 12 meses        & \$20,000.00                                                            \\ \hline
+TOTAL                        &                   &                 & \$107,000.00                                                           \\ \hline
+\end{longtable}

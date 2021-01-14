@@ -1,0 +1,34 @@
+% Please add the following required packages to your document preamble:
+% \usepackage{longtable}
+% Note: It may be necessary to compile the document several times to get a multi-page table to line up properly
+\begin{longtable}{|l|l|}
+\caption{Caso de prueba RF1.2}
+\label{CP_RF1_2}\\
+\hline
+\textbf{ID del Caso de prueba}                                                          & CPRF2                                                                                                                                                                                                                                        \\ \hline
+\endfirsthead
+%
+\multicolumn{2}{c}%
+{{\bfseries Tabla \thetable\ Continuación de la página anterior}} \\
+\endhead
+%
+\textbf{Versión}                                                                        & 1.0                                                                                                                                                                                                                                          \\ \hline
+\textbf{Nombre}                                                                         & \begin{tabular}[c]{@{}l@{}}Caso de prueba para la búsqueda de los \\ compuestos indicados.\end{tabular}                                                                                                                                      \\ \hline
+\textbf{\begin{tabular}[c]{@{}l@{}}Identificador de \\ requerimiento\end{tabular}}      & RF1.2                                                                                                                                                                                                                                        \\ \hline
+\textbf{Propósito}                                                                      & \begin{tabular}[c]{@{}l@{}}Calificar la búsqueda del compuesto en la base \\ de datos “Drug Bank” , desde obtener el nombre \\ en el archivo base a la adquisición del .pdb.\end{tabular}                                                  \\ \hline
+\textbf{Dependencias}                                                                   & Correcta obtención del archivo base.                                                                                                                                                                                                         \\ \hline
+\textbf{\begin{tabular}[c]{@{}l@{}}Ambiente de \\ prueba/configuración\end{tabular}}    & \begin{tabular}[c]{@{}l@{}}- Hardware: Equipo de computo\\ (preferentemente portatíl)\\ - Software: Compilador python3, \\ IDE y/o editor de texto.\end{tabular}                                                                             \\ \hline
+\textbf{Inicialización}                                                                 & \begin{tabular}[c]{@{}l@{}}- Codificación correspondiente al \\ requerimiento.\\ - Creación del archivo base.\end{tabular}                                                                                                                   \\ \hline
+\textbf{Finalización}                                                                   & N/A                                                                                                                                                                                                                                          \\ \hline
+\textbf{Acciones}                                                                       & \begin{tabular}[c]{@{}l@{}}. Compilar el código correspondiente.\\ - Contar con el archivo base previamente \\ cargado.\end{tabular}                                                                                                         \\ \hline
+\textbf{\begin{tabular}[c]{@{}l@{}}Descripción de los \\ datos de entrada\end{tabular}} & \begin{tabular}[c]{@{}l@{}}- Archivo de texto plano.\\ - Dirección para la conexión a “Drug Bank”.\end{tabular}                                                                                                                              \\ \hline
+\textbf{Salida esperada}                                                                & \begin{tabular}[c]{@{}l@{}}Notificación de adecuada estado del \\ compuesto en “Drug Bank” (Existente o no).\\ - De existir, informar que el compuesto \\ existe al igual que el archivo .pdb\\ - Adquisición correcta del .pdb\end{tabular} \\ \hline
+\textbf{Salida obtenida}                                                                &    \begin{tabular}[c]{@{}l@{}}- La notificación de la obtención de resultados\\ se realiza al finalizar toda la búsqueda de \\información necesaria.\\
+- En la terminal se muestra el avance que se \\lleva con la búsqueda.
+\end{tabular}                                                                                                                                                                                                                                         \\ \hline
+\textbf{Resultado}                                                                      &     \begin{tabular}[c]{@{}l@{}}- Muestra de avance de la búsqueda general, \\por terminal y por medio de la interfaz,\\ a través de una barra de proceso.
+\end{tabular}                                                                                                                                                                                                                                           \\ \hline
+\textbf{Severidad}                                                                      &  Baja                                                                                                                                                                                                                                            \\ \hline
+\textbf{Evidencia}                                                                      &   Evidencia en la imagen \ref{CPRF2-3-4}                                                                                                                                                                                                                                           \\ \hline
+\textbf{Estado}                                                                         & Iniciado.                                                                                                                                                                                                                                 \\ \hline
+\end{longtable}

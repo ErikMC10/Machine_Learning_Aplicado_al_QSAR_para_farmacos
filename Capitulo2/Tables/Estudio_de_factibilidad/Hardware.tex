@@ -1,0 +1,18 @@
+% Please add the following required packages to your document preamble:
+% \usepackage{longtable}
+% Note: It may be necessary to compile the document several times to get a multi-page table to line up properly
+\begin{longtable}{|l|l|c|}
+\caption{Elementos de hardware disponibles para el desarrollo del sistema}
+\label{Est_Hard}\\
+\hline
+\textbf{EQUIPO} & \textbf{DESCRIPCIÓN}                                                                                                                         & \multicolumn{1}{l|}{\textbf{CANTIDAD}} \\ \hline
+\endfirsthead
+%
+\multicolumn{3}{c}%
+{{\bfseries Tabla \thetable\ Continuación de la página anterior}} \\
+\endhead
+%
+Computador      & \begin{tabular}[c]{@{}l@{}}Modelo: HP 15-ac128la\\ Procesador: Intel Core i7-6500U 2.50 GHz\\ RAM: 8 GB\\ Disco duro: 2 TB\end{tabular}      & 1                                      \\ \hline
+Computador      & \begin{tabular}[c]{@{}l@{}}Modelo: HP Pavilion 15-cw1092lm\\ Procesador: AMD Ryzen 3 2300U \\ RAM: 12 GB\\ Disco duro: 1 TB\end{tabular}     & 1                                      \\ \hline
+Computador      & \begin{tabular}[c]{@{}l@{}}Modelo: TOSHIBA MQ01ABD100\\ Procesador: Intel Core i7-6498DU 2.50GHz\\ RAM: 4 GB\\ Disco duro: 1 TB\end{tabular} & 1                                      \\ \hline
+\end{longtable}

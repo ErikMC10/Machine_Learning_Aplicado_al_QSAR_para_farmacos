@@ -1,0 +1,36 @@
+% Please add the following required packages to your document preamble:
+% \usepackage{longtable}
+% Note: It may be necessary to compile the document several times to get a multi-page table to line up properly
+\begin{longtable}{|l|l|}
+\caption{Requerimiento funcional 1.5}
+\label{RF1_5}\\
+\hline
+\begin{tabular}[c]{@{}l@{}}Nombre del requerimiento funcional:\\ Búsqueda de las proteínas indicadas.\end{tabular}                                                                           & ID: RF1.5                                                                                       \\ \hline
+\endfirsthead
+%
+\multicolumn{2}{c}%
+{{\bfseries Tabla \thetable\ Continuación de la página anterior}} \\
+\endhead
+%
+\multicolumn{2}{|l|}{Área: Búsqueda de información.}                                                                                                                                                                                                                                           \\ \hline
+\multicolumn{2}{|l|}{Actor(es): Usuario del sistema.}                                                                                                                                                                                                                                          \\ \hline
+\multicolumn{2}{|l|}{Interesados: Sistema,}                                                                                                                                                                                                                                                    \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{@{}l@{}}Descripción: Buscar si las proteínas indicadas por el usuario existen sobre la\\ base de datos “PDB”, de donde se obtendrá su estructura molecular.\end{tabular}}                                                                              \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{@{}l@{}}Evento desencadenador: Luego de que el sistema obtenga las actividades\\ biológicas de los compuestos validados por el sistema, procederá\\ inmediatamente a buscar las proteínas indicadas por el usuario en el archivo\\ base.\end{tabular}} \\ \hline
+\multicolumn{2}{|l|}{Tipo de desencadenador: Temporal.}                                                                                                                                                                                                                                        \\ \hline
+Pasos realizados (ruta principal)                                                                                                                                                            & Información para los pasos                                                                      \\ \hline
+\begin{tabular}[c]{@{}l@{}}1.- El sistema lee el archivo ingresado, busca\\ la etiqueta “Proteins:” y obtiene una lista de\\ proteínas.\end{tabular}                                         & Archivo cargado al sistema.                                                                     \\ \hline
+\begin{tabular}[c]{@{}l@{}}2.- El sistema se conecta a la base de datos\\ “PDB”.\end{tabular}                                                                                                & \begin{tabular}[c]{@{}l@{}}No se requiere información para\\ este paso.\end{tabular}            \\ \hline
+\begin{tabular}[c]{@{}l@{}}3.- El sistema realiza la consulta\\ correspondiente a los nombres para cada una\\ de las proteínas y obtiene su estructura\\ molecular.\end{tabular}             & Lista de nombres de proteínas                                                                   \\ \hline
+\begin{tabular}[c]{@{}l@{}}4.- Por defecto, se obtendrá un archivo en\\ formato “pdb”, el cual se copiará a un\\ directorio temporal denominado “Proteins”.\end{tabular}                     & \begin{tabular}[c]{@{}l@{}}No se requiere información para\\ este paso.\end{tabular}            \\ \hline
+\multicolumn{2}{|l|}{Extensiones o Rutas alternativas.}                                                                                                                                                                                                                                        \\ \hline
+\multicolumn{1}{|c|}{N/A}                                                                                                                                                                      & \multicolumn{1}{c|}{N/A}                                                                          \\ \hline
+\multicolumn{2}{|l|}{Precondiciones: El sistema contiene la lista de proteínas a buscar.}                                                                                                                                                                                                      \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{@{}l@{}}Postcondiciones: El sistema valida la existencia de las proteínas en la base de\\ datos “PDB” y obtiene su estructura molecular.\end{tabular}}                                                                                                 \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{@{}l@{}}Suposiciones: El usuario ha ingresado correctamente el nombre de la proteína,\\ el archivo base se ha leído correctamente y la base de datos “PDB” se encuentra\\ accesible.\end{tabular}}                                                     \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{@{}l@{}}Garantía de éxito: El sistema confirma que la proteína existe, y ha podido\\ recopilar la información de su estructura molecular.\end{tabular}}                                                                                                \\ \hline
+\multicolumn{2}{|l|}{\begin{tabular}[c]{@{}l@{}}Garantía mínima: El sistema realiza la búsqueda sobre la base de datos “PDB” y\\ almacena las estructuras moleculares de las proteínas encontradas.\end{tabular}}                                                                              \\ \hline
+\multicolumn{2}{|l|}{Requerimientos cumplidos: Búsqueda de las proteínas indicadas.}                                                                                                                                                                                                           \\ \hline
+\multicolumn{2}{|l|}{Prioridad: Alta.}                                                                                                                                                                                                                                                         \\ \hline
+\multicolumn{2}{|l|}{Riesgo: Alta}                                                                                                                                                                                                                                                             \\ \hline
+\end{longtable}

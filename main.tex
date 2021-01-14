@@ -1,0 +1,58 @@
+\documentclass[letterpaper,12pt, twopage]{report}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{graphicx}
+\usepackage{anysize}
+\usepackage{float}
+\usepackage{fancyhdr}
+\usepackage{longtable}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{ragged2e}
+\usepackage{verbatim}
+\usepackage{pdfpages}
+
+%Agregar aquí los paquetes que hagan falta para su trabajo
+
+\marginsize{4cm}{2.5cm}{4cm}{2.5cm}
+\graphicspath{ {figuras/} }
+
+\pagestyle{fancy}
+\fancyhf{}
+
+\title{Machine Learning aplicado al QSAR para fármacos} %Cambiar según el título de su tesis
+
+
+\makeatletter 
+\let\newtitle\@title
+\let\newauthor\@author
+\makeatother
+
+\AtBeginDocument{\renewcommand{\contentsname}{Contenido}}
+\AtBeginDocument{\renewcommand{\listtablename}{Índice de tablas}}
+\AtBeginDocument{\renewcommand{\tablename}{Tabla}}
+\begin{document}
+\includepdf[pages=1-1]{Anexo/PortadaTT2}
+%%\include{Portada/portada} %Obligatorio
+\pagenumbering{roman}
+% \include{dedicatoria} %Opcional: Comentar si se desea
+% \include{agradecimientos} %Opcional: Comentar si se desea
+\tableofcontents%Obligatorio
+\addcontentsline{toc}{chapter}{\textbf{Índice de figuras}} 
+\listoffigures %Opcional: Comentar si se desea
+\addcontentsline{toc}{chapter}{\textbf{Índice de tablas}} 
+\listoftables %Opcional: Comentar si se desea
+
+\include{Capitulo1/resumen} %Obligatorio
+%\include{Capitulo1/introduccion} %Obligatorio
+\pagenumbering{arabic}
+\include{Capitulo1/Capitulo1} %Obligatorio
+\include{Capitulo_1-2/Extra_main}
+\include{Capitulo2/Capitulo2} %Obligatorio
+\include{Capitulo3/Capitulo3} %Obligatorio
+\include{Capitulo4/Capitulo4} %Obligatorio
+%\include{Bibliografia/conclusiones} %Obligatorio
+\include{Bibliografia/bibliografia} %Obligatorio
+\include{Anexo/anexo} %Opcional: Comentar si se desea
+
+\end{document}
